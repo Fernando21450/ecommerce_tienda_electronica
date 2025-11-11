@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <Home />
+    <Cabecera />
+    <NavBar />           <!-- Barra de navegación fija -->
+    <router-view />      <!-- Aquí se renderiza Home, Login, Registro, Carrito, etc. según la ruta -->
+    <AppFooter />
   </div>
 </template>
 
 <script>
-import Home from './view/Home.vue';
 
+import NavBar from './components/NavBar.vue';
+import AppFooter from './components/Footer.vue'
+import Cabecera from './components/Cabecera.vue';
 export default {
   name: 'App',
-  components: { Home }
+  components: { NavBar,AppFooter,Cabecera }
 }
 </script>
 

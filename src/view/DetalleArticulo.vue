@@ -12,8 +12,9 @@
             <p class="detalle-precio">Bs {{ articulo.precio.toFixed(2) }}</p>
   
             <div class="detalle-actions">
-              <button class="btn-add" @click="agregarAlCarrito">🛒 Añadir al Carrito</button>
-              <button class="btn-wishlist" @click="agregarAListaDeseos">💙 Añadir a Lista de Deseos</button>
+              <button @click="agregarAlCarrito(articulo)">🛒 Añadir al Carrito</button>
+              <button @click="agregarAListaDeseos(articulo)">💙 Añadir a Lista de Deseos</button>
+
             </div>
   
             <p class="detalle-stock" v-if="articulo.stock > 0">
